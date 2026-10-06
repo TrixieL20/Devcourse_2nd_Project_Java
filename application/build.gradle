@@ -46,8 +46,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
 
     // Google Cloud Storage
-    implementation 'com.google.cloud:spring-cloud-gcp-starter'
-    implementation 'com.google.cloud:spring-cloud-gcp-starter-storage'
+//    implementation 'com.google.cloud:spring-cloud-gcp-starter'
+//    implementation 'com.google.cloud:spring-cloud-gcp-starter-storage'
+
+    // S3
+    implementation 'software.amazon.awssdk:s3'
 
     // Caching
     implementation 'org.springframework.boot:spring-boot-starter-cache'
@@ -84,6 +87,7 @@ dependencies {
 dependencyManagement {
     imports {
         mavenBom "com.google.cloud:spring-cloud-gcp-dependencies:$springCloudGcpVersion"
+        mavenBom "software.amazon.awssdk:bom:2.27.21"
     }
 }
 
